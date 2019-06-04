@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "aragorn",
+    "image":
+      "./characters/aragorn.jpg",
+    "location": 1
+  },
+  {
+    "id": 2,
+    "name": "boromir",
+    "image":
+      "./characters/boromir.jpg",
+    "location": 2
+  },
+  {
+    "id": 3,
+    "name": "eowyn",
+    "image":
+      "./characters/eowyn.jpg",
+    "location": 3
+  },
+  {
+    "id": 4,
+    "name": "frodo",
+    "image":
+      "./characters/frodo.jpg",
+    "location": 4
+  },
+  {
+    "id": 5,
+    "name": "gandalf",
+    "image":
+      "./characters/gandalf.jpg",
+    "location": 5
+  },
+  {
+    "id": 6,
+    "name": "gimli",
+    "image":
+      "./characters/gimli.jpg",
+    "location": 6
+  },
+  {
+    "id": 7,
+    "name": "gollum",
+    "image":
+      "./characters/gollum.jpg",
+    "location": 7
+  },
+  {
+    "id": 8,
+    "name": "legolas",
+    "image":
+      "./characters/legolas.jpg",
+    "location": 8
+  },
+  {
+    "id": 9,
+    "name": "merry",
+    "image":
+      "./characters/merry.jpg",
+    "location": 9
+  },
+  {
+    "id": 10,
+    "name": "pippin",
+    "image":
+      "./characters/pippin.jpg",
+    "location": 10
+  },
+  {
+    "id": 11,
+    "name": "samwise",
+    "image":
+      "./characters/samwise.jpg",
+    "location": 11
+  },
+  {
+    "id": 12,
+    "name": "sauron",
+    "image":
+      "./characters/sauron.jpg",
+    "location": 12
+  }
+]
