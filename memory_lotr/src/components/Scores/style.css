@@ -6,3 +6,14 @@
   color: #2A77AE;
   margin-bottom: 50px;
 }
+
+.score {
+  flex: 1;
+  float: left;
+}
+
+.topScore{
+  padding-left: 3rem;
+  flex: 1;
+  float: right;
+}

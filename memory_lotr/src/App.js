@@ -17,60 +17,63 @@ class App extends Component {
     guesses: [],
   };
 
-  
-
-
-
-  handleClick = () => {
-/*     const shufflecharacters = () => {
-      const shuffle = require('shuffle-array');
-      let rearranged = shuffle(characters)
-      this.setState({ characters: rearranged });
-    };
-    shufflecharacters(); */
-
-    const game = () => {
-      const id = this.value;
-      console.log(id);
-      const array = this.state.guesses;
-      if (array.includes(id)) {
-        console.log('Game over')
-      } else {
-        array.push(id);
-        this.setState({guesses: array})
-        console.log(this.state.guesses)
-      }
-    };
-    game()
-    
-    /* const scoreCalc = () => {
-      const newScore = this.state.guesses.lenth*3;
-      console.log(newscore);
-
-    } 
-    scoreCalc();
- */
+  shufflecharacters = () => {
+    const shuffle = require('shuffle-array');
+    let rearranged = shuffle(characters)
+    this.setState({ characters: rearranged });
   };
-  
-  
 
-  
+  gameOver = () => {
+    this.setState({score: 0});
+    this.setState({guesses: [] });
+  }
+
+  game = (id) => {
+    const array = this.state.guesses;
+    if (array.includes(id)) {
+      alert("Game Over.  Try again!")
+      this.gameOver()
+    } else {
+      array.push(id);
+      this.setState({guesses: array});
+      console.log(this.state.guesses);
+
+      let newScore = this.state.guesses.length*3;
+      this.setState({score: newScore});
+
+      if (newScore > this.state.topScore){
+        this.setState({topScore: newScore})
+      }
+    }
+  };
+  handleClick = (id) => {    
+    this.shufflecharacters();    
+    this.game(id);
+  };  
 
   // Map over this.state.characters and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Test Your Memory! No Repeats!</Title>
-
-        {this.state.characters.map(friend => (
-          <FriendCard
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            clicked={this.handleClick}
+        <div className="row">
+          <Scores 
+            score = {this.state.score}
+            topScore = {this.state.topScore}
           />
-        ))}
+        </div>
+        <div className="row">
+          {this.state.characters.map(friend => (
+            <FriendCard
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+              clicked={this.handleClick}
+            />
+          ))}
+        </div>
+        
       </Wrapper>
     );
   }

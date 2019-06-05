@@ -9,7 +9,7 @@ function FriendCard(props) {
         value={props.id}
         alt={props.name} 
         src={props.image} 
-        onClick={props.clicked}
+        onClick={() => props.clicked(props.id)}
       />
       </div>
     </div>
