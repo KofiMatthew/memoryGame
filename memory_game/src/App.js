@@ -1,6 +1,5 @@
 import React from 'react';
 import CharacterContainer from './components/CharacterContainer';
-import characters from './components/characters.JSON'
 
 /* import './App.css'; */
 
